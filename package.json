@@ -1,0 +1,21 @@
+{
+  "name": "pixel-http-card",
+  "version": "0.1.1",
+  "description": "Custom Lovelace Card for ESP32 Pixel HTTP LED visualization",
+  "main": "dist/pixel-http-card.js",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w"
+  },
+  "dependencies": {
+    "lit": "^3.3.2",
+    "tslib": "^2.8.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.3.1",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "rollup": "^4.55.2",
+    "typescript": "^5.9.3"
+  }
+}
