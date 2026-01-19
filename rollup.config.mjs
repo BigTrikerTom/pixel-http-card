@@ -1,10 +1,5 @@
 import resolve from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 export default {
   input: 'src/pixel-http-card.ts',
@@ -16,7 +11,7 @@ export default {
   plugins: [
     resolve(),
     typescript({
-      tsconfig: path.resolve(__dirname, 'tsconfig.json'),
+      tsconfig: './tsconfig.json', // relativer Pfad ohne __dirname oder path.resolve
       sourceMap: true,
       module: 'ESNext'
     })
