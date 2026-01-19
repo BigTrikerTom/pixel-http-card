@@ -8,17 +8,17 @@ export class PixelHttpCard extends LitElement {
   static styles = styles;
 
   @property({ attribute: false })
-  public hass?: any;
+  public hass: any;
 
   @state()
-  private config: PixelHttpCardConfig = { type: '', host: '' };
+  private config: Partial<PixelHttpCardConfig> = {};
 
   @state()
   private framebuffer: Framebuffer = [];
 
   private timer?: number;
 
-  public setConfig(config: PixelHttpCardConfig) {
+  setConfig(config: PixelHttpCardConfig) {
     if (!config.host) throw new Error('host is required');
 
     this.config = {
@@ -27,13 +27,14 @@ export class PixelHttpCard extends LitElement {
       layout: 'linear',
       pixel_size: 10,
       pixel_gap: 2,
+      columns: 16,
       ...config
     };
 
     this.startPolling();
   }
 
-  public disconnectedCallback(): void {
+  disconnectedCallback() {
     if (this.timer) clearInterval(this.timer);
     super.disconnectedCallback();
   }
@@ -55,23 +56,20 @@ export class PixelHttpCard extends LitElement {
     }
   }
 
-  protected render() {
-    const size = this.config.pixel_size!;
-    const gap = this.config.pixel_gap!;
+  render() {
+    const size = this.config.pixel_size ?? 10;
+    const gap = this.config.pixel_gap ?? 2;
 
     const gridStyle = this.config.layout === 'grid'
-      ? `grid-template-columns: repeat(${this.config.columns ?? 16}, ${size}px); gap:${gap}px;`
-      : `gap:${gap}px; display:flex; flex-wrap:wrap;`;
+      ? `display:grid; grid-template-columns: repeat(${this.config.columns ?? 16}, ${size}px); gap:${gap}px;`
+      : `display:flex; flex-wrap:wrap; gap:${gap}px;`;
 
     return html`
       <ha-card header=${this.config.name ?? ''}>
         <div class="card">
-          <div class="pixels" style=${gridStyle}>
+          <div class="pixels ${this.config.layout}" style="${gridStyle}">
             ${this.framebuffer.map(p => html`
-              <div
-                class="pixel"
-                style="width:${size}px; height:${size}px; background-color: rgb(${p.r},${p.g},${p.b});">
-              </div>
+              <div class="pixel" style="width:${size}px; height:${size}px; background-color: rgb(${p.r},${p.g},${p.b});"></div>
             `)}
           </div>
         </div>

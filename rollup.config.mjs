@@ -5,11 +5,11 @@ export default {
   input: 'src/pixel-http-card.ts',
   output: {
     file: 'dist/pixel-http-card.js',
-    format: 'es'
+    format: 'es',
+    sourcemap: true
   },
   plugins: [
     resolve(),
-    typescript({ tsconfig: './tsconfig.json' })
-', sourceMap: true })
+    typescript({ tsconfig: './tsconfig.json', sourceMap: true, module: 'ESNext' })
   ]
 };
