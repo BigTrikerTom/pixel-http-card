@@ -2,6 +2,8 @@ import resolve from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
 import path from 'path';
 
+const tsConfigPath = path.join(__dirname, 'tsconfig.json').replace(/\\/g, '/');
+
 export default {
   input: 'src/pixel-http-card.ts',
   output: {
@@ -12,7 +14,7 @@ export default {
   plugins: [
     resolve(),
     typescript({
-      tsconfig: path.resolve('./tsconfig.json'),
+      tsconfig: tsConfigPath,
       sourceMap: true,
       module: 'ESNext'
     })
