@@ -11,5 +11,5 @@
   "category": "Lovelace",
   "homepage": "https://github.com/BigTrikerTom/pixel-http-card",
   "documentation": "https://github.com/BigTrikerTom/pixel-http-card/blob/main/README.md",
-  "tags": ["lovelace", "led", "pixel", "ESP32", "custom-card"]
+  "tags": ["lovelace", "led", "pixel", "ESP32", "custom-card", "Pre-Release"],
 }

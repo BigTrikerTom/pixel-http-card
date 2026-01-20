@@ -4,7 +4,7 @@
   "filename": "pixel-http-card.js",
   "type": "js",
   "country": "ALL",
-  "tags": ["lovelace", "led", "pixel", "ESP32", "custom-card"],
+  "tags": ["lovelace", "led", "pixel", "ESP32", "custom-card", "Pre-Release"],
   "homeassistant": "frontend",
   "version": "v.1.0.0-Beta-2"
 }
