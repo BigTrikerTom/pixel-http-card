@@ -5,8 +5,8 @@
     "moduleResolution": "Node",
 
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": false,
     "useDefineForClassFields": false,
+    "emitDecoratorMetadata": false,
 
     "strict": true,
     "lib": ["ES2022", "DOM"],

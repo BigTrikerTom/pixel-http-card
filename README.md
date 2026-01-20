@@ -5,7 +5,9 @@ Custom Lovelace Card zur Anzeige eines ESP32 WS2812 LED-Framebuffers über HTTP.
 
 
 ## Build
-
+Voraussetzungen:
+- Node.js >= 18
+- npm >= 9
 
 npm install
 npm run build
