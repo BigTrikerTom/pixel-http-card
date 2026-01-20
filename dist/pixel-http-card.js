@@ -100,7 +100,7 @@ background-color: #000;
 }
 `;
 
-const CARD_VERSION = '1.0.0'; // Versionskonstante für HACS / UI-Abfrage
+const CARD_VERSION = 'v.1.0.0-Beta-2'; // Versionskonstante für HACS / UI-Abfrage
 let PixelHttpCard = class PixelHttpCard extends i {
     constructor() {
         super(...arguments);
