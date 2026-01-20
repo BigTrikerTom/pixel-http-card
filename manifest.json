@@ -7,6 +7,9 @@
   "url": "https://github.com/BigTrikerTom/pixel-http-card",
   "js": "build/pixel-http-card.js",
   "type": "module",
+  "homeassistant": "frontend",
+  "category": "Lovelace",
   "homepage": "https://github.com/BigTrikerTom/pixel-http-card",
-  "documentation": "https://github.com/BigTrikerTom/pixel-http-card/blob/main/README.md"
+  "documentation": "https://github.com/BigTrikerTom/pixel-http-card/blob/main/README.md",
+  "tags": ["lovelace", "led", "pixel", "ESP32", "custom-card"]
 }
