@@ -7,7 +7,10 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+console.log(__dirname);
+
 // Absoluter Pfad zur tsconfig.json mit Linux-Slashes
+// const tsconfigPath = path.join(__dirname, 'tsconfig.json').replace(/\\/g, '/');
 const tsconfigPath = path.join(__dirname, 'tsconfig.json').replace(/\\/g, '/');
 
 export default {
@@ -20,7 +23,7 @@ export default {
   plugins: [
     resolve(),
     typescript({
-      tsconfig: tsconfigPath,
+      tsconfig: path.parse(tsconfigPath),
       sourceMap: true,
       module: 'ESNext'
     })
