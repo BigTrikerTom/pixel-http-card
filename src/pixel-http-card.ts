@@ -4,6 +4,9 @@ import { styles } from './styles';
 import type { Framebuffer, PixelHttpCardConfig } from './types';
 
 @customElement('pixel-http-card')
+
+export const CARD_VERSION = '1.0.0';
+
 export class PixelHttpCard extends LitElement {
   static styles = styles;
 
