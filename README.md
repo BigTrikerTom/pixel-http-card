@@ -1,4 +1,4 @@
-# pixel-http-card
+# pixel-http-card v.1.0.0-Beta-2
 
 
 Custom Lovelace Card zur Anzeige eines ESP32 WS2812 LED-Framebuffers über HTTP.

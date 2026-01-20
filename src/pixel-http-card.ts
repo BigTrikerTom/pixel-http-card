@@ -1,4 +1,4 @@
-export const CARD_VERSION = '1.0.0';  // Versionskonstante für HACS / UI-Abfrage
+export const CARD_VERSION = 'v.1.0.0-Beta-2';  // Versionskonstante für HACS / UI-Abfrage
 import { LitElement, html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { styles } from './styles';

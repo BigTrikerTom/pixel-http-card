@@ -1,6 +1,6 @@
 {
   "name": "Pixel HTTP Card",
-  "version": "1.0.0",
+  "version": "v.1.0.0-Beta-2",
   "slug": "pixel-http-card",
   "description": "Visualisiert den Status von WS2812/NeoPixel LED-Stripes via HTTP in Home Assistant.",
   "author": "BigTrikerTom",
